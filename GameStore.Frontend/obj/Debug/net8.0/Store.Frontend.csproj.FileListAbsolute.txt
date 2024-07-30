@@ -1,0 +1,10 @@
+D:\.net\Blazor\Store.Frontend\obj\Debug\net8.0\Store.Frontend.GeneratedMSBuildEditorConfig.editorconfig
+D:\.net\Blazor\Store.Frontend\obj\Debug\net8.0\Store.Frontend.AssemblyInfoInputs.cache
+D:\.net\Blazor\Store.Frontend\obj\Debug\net8.0\Store.Frontend.AssemblyInfo.cs
+D:\.net\Blazor\Store.Frontend\obj\Debug\net8.0\Store.Frontend.csproj.CoreCompileInputs.cache
+D:\.net\Blazor\Store.Frontend\obj\Debug\net8.0\Store.Frontend.MvcApplicationPartsAssemblyInfo.cache
+D:\.net\Blazor\GameStore.Frontend\obj\Debug\net8.0\Store.Frontend.GeneratedMSBuildEditorConfig.editorconfig
+D:\.net\Blazor\GameStore.Frontend\obj\Debug\net8.0\Store.Frontend.AssemblyInfoInputs.cache
+D:\.net\Blazor\GameStore.Frontend\obj\Debug\net8.0\Store.Frontend.AssemblyInfo.cs
+D:\.net\Blazor\GameStore.Frontend\obj\Debug\net8.0\Store.Frontend.csproj.CoreCompileInputs.cache
+D:\.net\Blazor\GameStore.Frontend\obj\Debug\net8.0\Store.Frontend.MvcApplicationPartsAssemblyInfo.cache

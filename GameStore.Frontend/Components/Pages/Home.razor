@@ -1,0 +1,88 @@
+﻿@page "/"
+@inject GamesClient Client
+<PageTitle>Games Catalog</PageTitle>
+
+
+
+@if(games is null)
+{
+ <p> <em>Loading...</em></p>
+}
+else
+{
+    <div class="d-flex justify-content-center align-items-center ">
+        <div class="bg-white" style="width: 100%;">
+            <table class="table table-bordered table-hover mt- container-fluid w-100 rounded">
+                <thead class="table-dark">
+                    <th>Name</th>
+                    <th>Genre</th>
+                    <th>Release Date</th>
+                    <th class="text-end">Price</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    @foreach(var game in games)
+                    {
+                        <tr>
+                            <td>@game.Name</td>
+                            <td>@game.Genre</td>
+                            <td>@game.ReleaseDate</td>
+                            <td class="text-end text-bold">@game.Price.ToString("C2")</td>
+                            <td>
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-dark me-2" role="button" href="@GameURL(game.Id)">
+                                        <i class="bi bi-tools"></i>
+                                    </a>
+
+                                    <button class="btn btn-danger me-2" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="@GetDeleteModalId(game)">
+
+                                        <i class="bi bi-trash-fill"></i>
+                                    </button>
+                                </div>
+                                <DeleteGame Game="@game"/>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table> 
+            <div class="mt-2 d-flex justify-content-center d-grid gap-2 pb-3">
+                <a class="btn btn-dark btn-lg" role="button" href="/editGame">Add New Game <i class="bi bi-file-earmark-plus-fill"></i></a>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+@code
+{
+    private GameSummary[]? games;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+         games = Client.GetGamesList();
+    }
+
+    private static string  GameURL(int Id) => $"/editGame/{Id}";
+
+    private string GetDeleteModalId(GameSummary game)
+    {
+        return $"#{DeleteGame.GetModalId(game)}";
+    }
+
+}    
+
+
+<style>
+    html, body {
+        background-image: url('Images/Games.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+</style>

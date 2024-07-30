@@ -7,3 +7,6 @@ You can view, edit remove and update any of the entries
 ![Add new Game](https://github.com/user-attachments/assets/27314177-2b4f-4143-a783-6a941db0cbc5)
 
 ![EditGame](https://github.com/user-attachments/assets/eba4c48b-bde0-408f-8dc4-bc30fa6635db)
+
+This uses net8.0
+The SDK is "Microsoft.NET.Sdk.Web"
